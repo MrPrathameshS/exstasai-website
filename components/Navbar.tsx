@@ -6,7 +6,10 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-tight">
+        <Link
+          href="/"
+          className="text-xl font-bold tracking-tight"
+        >
           ExstasAI
         </Link>
 
@@ -25,6 +28,13 @@ export default function Navbar() {
             className="hover:text-black transition"
           >
             Blog
+          </Link>
+
+          <Link
+            href="/about"
+            className="hover:text-black transition"
+          >
+            About
           </Link>
 
           <Link

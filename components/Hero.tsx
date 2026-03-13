@@ -1,34 +1,47 @@
-import Link from "next/link";
+"use client";
 
 export default function Hero() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-28 text-center">
+    <section className="w-full py-28 px-6 flex flex-col items-center text-center">
 
-      <h1 className="text-5xl font-bold leading-tight">
-        We Build Production AI Systems
+      {/* Headline */}
+      <h1 className="text-5xl md:text-6xl font-bold max-w-4xl leading-tight">
+        Production AI Systems for Real-World Applications
       </h1>
 
-      <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-        ExstasAI designs and deploys AI systems for automation,
-        computer vision, and intelligent business workflows.
+      {/* Subtext */}
+      <p className="mt-6 text-gray-600 max-w-2xl text-lg">
+        We design and deploy production-ready AI systems for automation,
+        computer vision, and intelligent workflows.
       </p>
 
-      <div className="mt-10 flex justify-center gap-4">
 
-        <Link
-          href="/products"
-          className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+      {/* Consultation card */}
+      <div className="mt-12 border rounded-2xl p-8 max-w-xl w-full shadow-sm bg-white">
+
+        <div className="text-lg font-semibold mb-3">
+          AI Consultation Assistant
+        </div>
+
+        <div className="bg-gray-100 p-4 rounded mb-5 text-sm">
+          Describe your business problem and get a quick AI consultation.
+        </div>
+
+        <button
+          className="bg-black text-white px-6 py-2 rounded-lg hover:opacity-90"
+          onClick={() => {
+            window.location.href = "/chat";
+          }}
         >
-          View Solutions
-        </Link>
+          Start AI Consultation
+        </button>
 
-        <Link
-          href="/contact"
-          className="px-6 py-3 border rounded-lg hover:bg-gray-100 transition"
-        >
-          Contact Us
-        </Link>
+      </div>
 
+
+      {/* trust line */}
+      <div className="mt-10 text-sm text-gray-500">
+        Custom AI Systems • Production Deployment • Consulting & Integration
       </div>
 
     </section>
